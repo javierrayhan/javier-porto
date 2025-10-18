@@ -62,13 +62,27 @@
 
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
-                    <ul>
-                        <li><a href="index.html" class="home-link">Javier.</a></li>
-                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">About</a></li>
-                        <li><a href="#works" class="smoothscroll">Works</a></li>
-                        <!-- <li><a href="https://javierrayhan.my.id/store">Store</a></li> -->
-                        <li><a href="#contact" class="smoothscroll">Say Hello</a></li>
+                    <ul itemscope itemtype="https://schema.org/SiteNavigationElement">
+                        <li itemprop="name">
+                            <a itemprop="url" href="index.html" class="home-link" title="Back to homepage">Javier.</a>
+                        </li>
+
+                        <li itemprop="name" class="current">
+                            <a itemprop="url" href="#intro" class="smoothscroll" title="Go to introduction section">Intro</a>
+                        </li>
+
+                        <li itemprop="name">
+                            <a itemprop="url" href="#about" class="smoothscroll" title="Learn more about Javier">About</a>
+                        </li>
+
+                        <li itemprop="name">
+                            <a itemprop="url" href="#works" class="smoothscroll" title="View Javier’s projects and works">Works</a>
+                        </li>
+                        <!-- Uncomment later if you have a store -->
+                        <!-- <li itemprop="name"><a itemprop="url" href="https://javierrayhan.my.id/store" title="Visit Javier’s store">Store</a></li> -->
+                        <li itemprop="name">
+                            <a itemprop="url" href="#contact" class="smoothscroll" title="Get in touch with Javier">Say Hello</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -136,25 +150,48 @@
                             <p class="attention-getter" data-animate-el>
                                 I am Javier Rayhan A., a dedicated tech enthusiast with a strong passion for IoT, AI, and embedded systems. As a admitted student at Telkom University (Informatics), I specialize in developing microcontroller-based projects, particularly using ESP32, C++, and advanced hardware integrations.
                             </p>
-                            <a href="docs/CV_JavierRayhanA-2025.pdf" download="CV_JavierRayhanA-2025" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+                            <a href="docs/CV_JavierRayhanA-2025.pdf" download="CV_JavierRayhanA-2025" 
+                            title="Download Javier Rayhan A's CV File" 
+                            aria-label="Download Javier Rayhan A's CV File"
+                            class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
 
                         </div>
                     </div>
                 </div> <!-- about-info -->
 
 
-                <div class="row about-expertise" data-animate-block>
+                <div class="row about-expertise" aria-label="Javier’s professional skills" data-animate-block>
                     <div class="column lg-12">
 
                         <h2 class="text-pretitle" data-animate-el>Expertise</h2>
 
-                        <ul class="skills-list h1" data-animate-el>
-                            <li>3D Printing</li>
-                            <li>UI/UX</li>
-                            <li>Embedded System</li>
-                            <li>Product Design</li>
-                            <li>Prototyping</li>
-                            <li>PCB Design</li>
+                        <ul class="skills-list h1" data-animate-el itemscope itemtype="https://schema.org/ItemList">
+                            <meta itemprop="name" content="List of Javier Rayhan's Technical Skills">
+                            <meta itemprop="description" content="A list of technical and creative skills including embedded systems, 3D printing, UI/UX design, and product prototyping.">
+                            
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm">
+                            <span itemprop="name">3D Printing</span>
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm">
+                            <span itemprop="name">UI/UX</span>
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm">
+                            <span itemprop="name">Embedded System</span>
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm">
+                            <span itemprop="name">Product Design</span>
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm">
+                            <span itemprop="name">Prototyping</span>
+                            </li>
+
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/DefinedTerm">
+                            <span itemprop="name">PCB Design</span>
+                            </li>
                         </ul>
 
                     </div>
