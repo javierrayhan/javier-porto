@@ -4170,6 +4170,50 @@ img.u-pull-left {
     display : none;
 }
 
+/* Hide the real checkbox but keep it accessible */
+.expand-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.expand-label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  color: #aaa;
+  font-size: 0.8em;
+  transition: color 0.2s;
+  margin-top: 4px;
+  user-select: none;
+}
+
+.expand-label::before {
+  content: "›";
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-right: 5px;
+  color: #aaa;
+}
+
+.expand-toggle:checked + .expand-label::before {
+  transform: rotate(90deg);
+}
+
+.expand-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #aaa;
+  font-size: 0.em;
+}
+
+.expand-toggle:checked ~ .expand-content {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 5px;
+}
 /* ------------------------------------------------------------------- 
  * ## go top
  * ------------------------------------------------------------------- */
